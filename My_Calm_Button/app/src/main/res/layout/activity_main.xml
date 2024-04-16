@@ -28,7 +28,6 @@
         android:text="@string/main_question"
         android:textColor="@color/black"
         android:textSize="24sp"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.592"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,11 +40,11 @@
         android:layout_marginTop="100dp"
         android:text="Generate Calm"
         android:textSize="20sp"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottyTwo"
