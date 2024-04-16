@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.furniture.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_notifications"
+            app:destination="@id/navigation_notifications" />
+        <action
+            android:id="@+id/action_navigation_home_to_kidsFragment"
+            app:destination="@id/kidsFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_saleFragment2"
+            app:destination="@id/saleFragment2" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_zal"
+            app:destination="@id/navigation_zal" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_bed_room"
+            app:destination="@id/navigation_bed_room" />
+        <action
+            android:id="@+id/action_navigation_home_to_gardenFragment"
+            app:destination="@id/gardenFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_kuchFragment"
+            app:destination="@id/kuchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_bed_room"
+        android:name="com.example.furniture.ui.bedroom.BedRoomFragment"
+        android:label="BedRoom"
+        tools:layout="@layout/fragment_bedroom" >
+        <action
+            android:id="@+id/action_navigation_bed_room_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_zal"
+        android:name="com.example.furniture.ui.zal.ZalFragment"
+        android:label="Zal"
+        tools:layout="@layout/fragment_zal" >
+        <action
+            android:id="@+id/action_navigation_zal_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/saleFragment2"
+        android:name="com.example.furniture.ui.sale.SaleFragment"
+        android:label="fragment_sale"
+        tools:layout="@layout/fragment_sale" >
+        <action
+            android:id="@+id/action_saleFragment2_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/descriptionFragment"
+        android:name="com.example.furniture.ui.description.DescriptionFragment"
+        android:label="fragment_description"
+        tools:layout="@layout/fragment_description" >
+        <action
+            android:id="@+id/action_descriptionFragment_to_navigation_home2"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_descriptionFragment_to_navigation_home3"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/gardenFragment"
+        android:name="com.example.furniture.ui.garden.GardenFragment"
+        android:label="fragment_garden"
+        tools:layout="@layout/fragment_garden" >
+        <action
+            android:id="@+id/action_gardenFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/kuchFragment"
+        android:name="com.example.furniture.ui.kitchen.KitchenFragment"
+        android:label="fragment_kitchen"
+        tools:layout="@layout/fragment_kitchen" >
+        <action
+            android:id="@+id/action_kitchenFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/kidsFragment"
+        android:name="com.example.furniture.ui.kidsroom.KidsFragment"
+        android:label="fragment_kids"
+        tools:layout="@layout/fragment_kids" >
+        <action
+            android:id="@+id/action_kidsFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+</navigation>
