@@ -9,19 +9,21 @@ import androidx.room.Update;
 import com.example.avatarbook.models.Student;
 import java.util.List;
 
-
 @Dao
 public interface StudentDao {
-    @Query("SELECT*FROM students")
+
+    @Query("SELECT * FROM students")
     List<Student> getAll();
+
     @Insert
     void insert(Student student);
+
     @Delete
     void delete(Student student);
 
     @Update
     void update(Student student);
+
     @Query("SELECT * FROM students ORDER BY name_surname ASC")
     List<Student> sortAll();
-
 }

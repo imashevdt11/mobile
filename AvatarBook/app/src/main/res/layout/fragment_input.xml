@@ -24,7 +24,8 @@
         android:layout_gravity="center_horizontal"
         android:text="LOAD"
         android:textAllCaps="false"
-        app:cornerRadius="32dp" />
+        app:cornerRadius="32dp"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/edit_name_surname"
@@ -32,8 +33,9 @@
         android:layout_height="36dp"
         android:background="#D3C3E6"
         android:hint="name"
-        android:paddingLeft="11dp"
-        />
+        android:paddingStart="11dp"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextFields" />
+
     <EditText
         android:id="@+id/edit_telNubmer"
         android:layout_width="match_parent"
@@ -41,8 +43,8 @@
         android:background="#D3C3E6"
         android:hint="phone"
         android:layout_marginTop="20dp"
-        android:paddingLeft="11dp"
-        />
+        android:paddingStart="11dp"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextFields" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_save"
@@ -50,7 +52,8 @@
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
         android:text="ADD"
-        app:cornerRadius="32dp" />
+        app:cornerRadius="32dp"
+        tools:ignore="HardcodedText" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_perehod"
@@ -59,5 +62,7 @@
         android:layout_gravity="center_horizontal"
         android:text="CONTACTS"
         android:visibility="visible"
-        app:cornerRadius="32dp" />
+        app:cornerRadius="32dp"
+        tools:ignore="HardcodedText" />
+
 </LinearLayout>

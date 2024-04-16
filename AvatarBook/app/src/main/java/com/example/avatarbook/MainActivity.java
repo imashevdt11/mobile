@@ -1,8 +1,11 @@
 package com.example.avatarbook;
 
+import static android.content.ContentValues.TAG;
+
 import android.annotation.SuppressLint;
 import android.database.CursorWindow;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -42,8 +45,7 @@ public class MainActivity extends AppCompatActivity {
             field.set(null, 100*1024*1024);
 
         } catch (Exception e){
-            e.printStackTrace();
+            Log.e(TAG, "Error setting CursorWindow size", e);
         }
     }
-
 }
