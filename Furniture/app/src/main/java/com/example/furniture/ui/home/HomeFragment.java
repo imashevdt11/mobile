@@ -24,49 +24,42 @@ public class HomeFragment extends Fragment {
     private FragmentHomeBinding binding;
 
     List<CategoryModel> list_category = new ArrayList<>();
+
     CategoryAdapter adapter;
-    LottieAnimationView lotty_sale, lotty_reclama;
+
+    LottieAnimationView lotty_sale, lotty_ad;
+
     NavController navController;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-
-
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
-//        lotty_reclama = binding.lottySale;
-//        lotty_sale = binding.lottyReklama;
-//
-//        lotty_reclama.setAnimation(R.raw.sale);
+//        lotty_ad = binding.lottySale;
+//        lotty_sale = binding.lottyAd;
+//        lotty_ad.setAnimation(R.raw.sale);
 //        lotty_sale.setAnimation(R.raw.furnituree);
-
         createList();
         adapter = new CategoryAdapter();
         adapter.setMain_list(list_category);
         binding.rvCatalogCategory.setAdapter(adapter);
         return root;
-
     }
 
     private void createList() {
-        list_category.add(new CategoryModel("Для спальни", R.drawable.bedroom));
-        list_category.add(new CategoryModel("Для гостинной", R.drawable.living_room));
-        list_category.add(new CategoryModel("Кухонная мебель", R.drawable.kitchen));
-        list_category.add(new CategoryModel("Юношеские гарнитуры", R.drawable.kids));
-        list_category.add(new CategoryModel("Садовая мебель", R.drawable.garden));
-
+        list_category.add(new CategoryModel("Bedroom", R.drawable.bedroom));
+        list_category.add(new CategoryModel("Zal", R.drawable.living_room));
+        list_category.add(new CategoryModel("Kitchen", R.drawable.kitchen));
+        list_category.add(new CategoryModel("Kids", R.drawable.kids));
+        list_category.add(new CategoryModel("Garden", R.drawable.garden));
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        binding.saleCardView.setOnClickListener(v->{
-            navController = Navigation.findNavController(requireActivity(),
-                    R.id.nav_host_fragment_activity_main);
-            navController.navigate(R.id.action_navigation_home_to_saleFragment2);
+        binding.saleCardView.setOnClickListener(v -> {
+            navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
+            navController.navigate(R.id.action_navigation_home_to_fragment_sale);
         });
-
     }
 
     @Override

@@ -17,8 +17,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
+
     List<CategoryModel> main_list = new ArrayList<>();
+
     ItemCategoryBinding binding;
+
     NavController navController;
 
     public void setMain_list(List<CategoryModel> main_list) {
@@ -28,78 +31,56 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     @NonNull
     @Override
     public CategoryAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        binding = ItemCategoryBinding
-                .inflate(LayoutInflater.from(parent.getContext()),parent,false);
+        binding = ItemCategoryBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
         return new ViewHolder(binding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull CategoryAdapter.ViewHolder holder, int position) {
         holder.onBind(main_list.get(position));
-
-
     }
 
     @Override
     public int getItemCount() {
-
         return main_list.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+
         ItemCategoryBinding binding;
+
         public ViewHolder(@NonNull ItemCategoryBinding itemView) {
             super(itemView.getRoot());
             binding = itemView;
         }
 
         public void onBind(CategoryModel categoryModel) {
-
             binding.titleCategory.setText(categoryModel.getTitle());
             binding.imageCategory.setImageResource(categoryModel.getImage());
-
-
-
-            itemView.setOnClickListener(v-> {
-
+            itemView.setOnClickListener(v -> {
                 switch (categoryModel.getTitle()) {
-                    case "Для спальни":
-                        navController = Navigation.findNavController((Activity) itemView.getContext(),
-                                R.id.nav_host_fragment_activity_main);
-                        navController.navigate(R.id.action_navigation_home_to_navigation_bed_room);
+                    case "Bedroom":
+                        navController = Navigation.findNavController((Activity) itemView.getContext(), R.id.nav_host_fragment_activity_main);
+                        navController.navigate(R.id.action_navigation_home_to_navigation_bedroom);
                         break;
-
-                    case "Для гостинной":
-                        navController = Navigation.findNavController((Activity) itemView.getContext(),
-                                R.id.nav_host_fragment_activity_main);
+                    case "Zal":
+                        navController = Navigation.findNavController((Activity) itemView.getContext(), R.id.nav_host_fragment_activity_main);
                         navController.navigate(R.id.action_navigation_home_to_navigation_zal);
-
                         break;
-
-                    case "Кухонная мебель":
-                        navController = Navigation.findNavController((Activity) itemView.getContext(),
-                                R.id.nav_host_fragment_activity_main);
-                        navController.navigate(R.id.action_navigation_home_to_kuchFragment);
+                    case "Kitchen":
+                        navController = Navigation.findNavController((Activity) itemView.getContext(), R.id.nav_host_fragment_activity_main);
+                        navController.navigate(R.id.action_navigation_home_to_fragment_kitchen);
                         break;
-
-                    case "Юношеские гарнитуры":
-                        navController = Navigation.findNavController((Activity) itemView.getContext(),
-                                R.id.nav_host_fragment_activity_main);
-                        navController.navigate(R.id.action_navigation_home_to_kidsFragment);
+                    case "Kids":
+                        navController = Navigation.findNavController((Activity) itemView.getContext(), R.id.nav_host_fragment_activity_main);
+                        navController.navigate(R.id.action_navigation_home_to_fragment_kids);
                         break;
-
-                    case "Садовая мебель":
-                        navController = Navigation.findNavController((Activity) itemView.getContext(),
-                                R.id.nav_host_fragment_activity_main);
-                        navController.navigate(R.id.action_navigation_home_to_gardenFragment);
-
+                    case "Garden":
+                        navController = Navigation.findNavController((Activity) itemView.getContext(), R.id.nav_host_fragment_activity_main);
+                        navController.navigate(R.id.action_navigation_home_to_fragment_garden);
                         break;
                 }
-
-
             });
-
         }
-
     }
 }

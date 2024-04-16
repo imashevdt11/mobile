@@ -1,50 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:padding="9dp">
-    <ImageView        android:id="@+id/image_card"
-        android:layout_width="380dp"        android:layout_height="380dp"
-        android:layout_gravity="center_horizontal"        android:src="@drawable/ic_launcher_background"/>
-    <TextView            android:id="@+id/name_card"
+
+    <ImageView
+        android:id="@+id/image_card"
+        android:layout_width="380dp"
+        android:layout_height="380dp"
+        android:layout_gravity="center_horizontal"        android:src="@drawable/ic_launcher_background"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/name_card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Диван  Wella "
+        android:text="Furniture Title"
         android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:background="#FFEB3B">
+
         <TextView
             android:id="@+id/price_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:text="1250"
+            android:layout_marginEnd="10dp"
+            android:text="(Price place) 1250"
             android:textSize="26sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
         <TextView
             android:id="@+id/tv_dollars_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="$"
             android:textSize="26sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
     </LinearLayout>
+
     <TextView
         android:id="@+id/description_card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="9dp"
-        android:layout_marginRight="2dp"
-        android:text="blah-blahblah-blah blah-blah blah-blah blah-blah blah-blah blah-blah"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="2dp"
+        android:text="blah-blah blah-blah blah-blah blah-blah blah-blah blah-blah blah-blah"
         android:textAlignment="center"
         android:textSize="20sp"
         android:visibility="visible"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        tools:ignore="HardcodedText" />
 </androidx.appcompat.widget.LinearLayoutCompat>

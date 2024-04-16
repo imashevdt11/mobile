@@ -6,9 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".ui.description.DescriptionFragment"
-    android:orientation="vertical"
-    >
-
+    android:orientation="vertical">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_details_catalog"
@@ -31,5 +29,5 @@
         android:background="@drawable/left"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
+        tools:ignore="ContentDescription,TouchTargetSizeCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

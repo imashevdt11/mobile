@@ -25,8 +25,7 @@ public class DescriptionAdapter extends RecyclerView.Adapter<DescriptionAdapter.
     @NonNull
     @Override
     public DescriptionAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        binding = ItemDescriptionBinding
-                .inflate(LayoutInflater.from(parent.getContext()),parent,false);
+        binding = ItemDescriptionBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
         return new ViewHolder(binding);
     }
 
@@ -44,7 +43,6 @@ public class DescriptionAdapter extends RecyclerView.Adapter<DescriptionAdapter.
 
         public ViewHolder(@NonNull ItemDescriptionBinding itemView) {
             super(itemView.getRoot());
-
         }
 
         public void onBind(FurnitureModel furnitureModel) {

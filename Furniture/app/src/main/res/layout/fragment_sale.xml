@@ -15,19 +15,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="42dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_furniture"
-        />
+        tools:listitem="@layout/item_furniture" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Хиты продаж:"
+        android:text="Sales Hits"
         android:textStyle="bold"
         android:textSize="22sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        tools:ignore="HardcodedText" />
+
     <ImageButton
         android:id="@+id/btn_back"
         android:layout_width="50dp"
@@ -36,5 +37,5 @@
         android:background="@drawable/left"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
+        tools:ignore="ContentDescription,TouchTargetSizeCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

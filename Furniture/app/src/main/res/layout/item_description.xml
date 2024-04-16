@@ -12,17 +12,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_marginTop="38dp">
+            android:layout_marginTop="38dp"
+            tools:ignore="ScrollViewSize">
+
             <ImageView
                 android:id="@+id/image_card"
                 android:layout_width="380dp"
                 android:layout_height="380dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/ic_launcher_background" />
+                android:src="@drawable/ic_launcher_background"
+                tools:ignore="ContentDescription" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -36,9 +40,10 @@
                     android:id="@+id/name_card"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Диван  Wella "
+                    android:text="Some furniture"
                     android:textSize="26sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -51,10 +56,11 @@
                         android:id="@+id/price_card"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:text="1250"
+                        android:layout_marginEnd="10dp"
+                        android:text="(price place) 1250"
                         android:textSize="26sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/tv_dollars_card"
@@ -63,8 +69,7 @@
                         android:text="$"
                         android:textSize="26sp"
                         android:textStyle="bold"
-
-                        />
+                        tools:ignore="HardcodedText" />
                 </LinearLayout>
 
                 <TextView
@@ -72,17 +77,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:visibility="gone" />
+
                 <TextView
                     android:id="@+id/description_card"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="9dp"
-                    android:layout_marginRight="2dp"
-                    android:text="blah-blahblah-blah blah-blah blah-blah blah-blah blah-blah blah-blah"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginEnd="2dp"
+                    android:text="blah-blah blah-blah blah-blah blah-blah blah-blah blah-blah blah-blah"
                     android:textSize="20sp"
                     android:visibility="visible"
                     android:layout_marginTop="10dp"
-                    />
+                    tools:ignore="HardcodedText" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.kidsroom.KidsFragment">
+    tools:context=".ui.categories.KidsFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_kids"
@@ -16,17 +16,19 @@
         android:layout_marginTop="42dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_furniture"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Юношеская мебель:"
+        android:text="KIDS"
         android:textStyle="bold"
         android:textSize="22sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:gravity="center_horizontal"
-        android:layout_marginTop="12dp"/>
+        android:layout_marginTop="12dp"
+        tools:ignore="HardcodedText" />
 
     <ImageButton
         android:id="@+id/btn_back"
@@ -38,6 +40,5 @@
         android:contentDescription="more"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
-
+        tools:ignore="HardcodedText,TouchTargetSizeCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

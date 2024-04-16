@@ -5,11 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context=".ui.zal.ZalFragment">
+    tools:context=".ui.categories.ZalFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_zal_room"
+        android:id="@+id/rv_zal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -18,17 +17,20 @@
         android:layout_marginTop="42dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_furniture"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="мебель для гостинной:"
+        android:text="ZAL"
         android:textStyle="bold"
         android:textSize="22sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="12dp"
-        android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        tools:ignore="HardcodedText" />
+
     <ImageButton
         android:id="@+id/btn_back"
         android:layout_width="50dp"
@@ -38,6 +40,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="12dp"
-        tools:ignore="TouchTargetSizeCheck" />
-
+        tools:ignore="ContentDescription,TouchTargetSizeCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

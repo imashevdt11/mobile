@@ -8,12 +8,15 @@ import androidx.annotation.NonNull;
 public class FurnitureModel implements Parcelable {
 
     long id;
+
     String category;
 
     String title;
+
     String price;
 
     String description;
+
     String discount;
 
     int imageInt;
@@ -27,7 +30,6 @@ public class FurnitureModel implements Parcelable {
         this.price = price;
         this.description = description;
         this.discount = discount;
-
         this.image = image;
     }
 
@@ -38,7 +40,6 @@ public class FurnitureModel implements Parcelable {
         this.description = description;
         this.discount = discount;
         this.imageInt = imageInt;
-
     }
 
     public FurnitureModel(String category, String title, String price, String description,  int imageInt) {
@@ -57,10 +58,10 @@ public class FurnitureModel implements Parcelable {
         description = in.readString();
         discount = in.readString();
         imageInt = in.readInt();
-
     }
 
     public static final Creator<FurnitureModel> CREATOR = new Creator<FurnitureModel>() {
+
         @Override
         public FurnitureModel createFromParcel(Parcel in) {
             return new FurnitureModel(in);
@@ -150,6 +151,5 @@ public class FurnitureModel implements Parcelable {
         dest.writeString(description);
         dest.writeString(discount);
         dest.writeInt(imageInt);
-
     }
 }
